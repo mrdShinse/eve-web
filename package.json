@@ -1,0 +1,29 @@
+{
+  "name": "angular-express-sample",
+  "version": "0.0.1-dev",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "buildNg": "cd ./frontend && ng build -prod && mv ./dist ../dist/webapp && cd ..",
+    "clean": "rimraf ./dist",
+    "build": "npm run clean && tsc -p ./tsconfig.json && npm run buildNg",
+    "start": "npm run build && node ./dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrdShinse/angular-express-sample.git"
+  },
+  "author": "mrdShinse",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrdShinse/angular-express-sample/issues"
+  },
+  "homepage": "https://github.com/mrdShinse/angular-express-sample#readme",
+  "dependencies": {
+    "@types/node": "^7.0.10",
+    "express": "^4.15.2",
+    "rimraf": "^2.6.1",
+    "tslint": "^4.5.1",
+    "typescript": "^2.2.1"
+  }
+}
